@@ -1,0 +1,232 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Applications iOS — Mohamed Fourali</title>
+<meta name="description" content="Applications iOS soignées, sans compte et sans collecte de données : MailleCompagnon, BruitBlanc+ et BudgetZen.">
+<link rel="icon" href="icons/maillecompagnon.png">
+<style>
+  :root {
+    --bg: #fbfaf8;
+    --surface: #ffffff;
+    --border: #e7e3dd;
+    --text: #1d1b19;
+    --muted: #6b655e;
+    --accent: #b8562f;
+    --shadow: 0 1px 2px rgba(0,0,0,.04), 0 8px 24px rgba(0,0,0,.05);
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #161514;
+      --surface: #201e1c;
+      --border: #322f2c;
+      --text: #f2efea;
+      --muted: #a29b92;
+      --accent: #e08a5f;
+      --shadow: 0 1px 2px rgba(0,0,0,.3), 0 8px 24px rgba(0,0,0,.35);
+    }
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    margin: 0;
+    padding: 0 20px 64px;
+    background: var(--bg);
+    color: var(--text);
+    font: 16px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .wrap { max-width: 780px; margin: 0 auto; }
+
+  header {
+    padding: 72px 0 44px;
+    text-align: center;
+  }
+  h1 {
+    margin: 0 0 12px;
+    font-size: clamp(1.9rem, 5vw, 2.6rem);
+    font-weight: 700;
+    letter-spacing: -0.02em;
+  }
+  .tagline {
+    margin: 0 auto;
+    max-width: 30em;
+    color: var(--muted);
+    font-size: 1.05rem;
+  }
+
+  .apps {
+    display: grid;
+    gap: 16px;
+  }
+
+  .app {
+    display: grid;
+    grid-template-columns: 84px 1fr;
+    gap: 20px;
+    align-items: start;
+    padding: 22px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 18px;
+    box-shadow: var(--shadow);
+  }
+
+  .app img {
+    width: 84px;
+    height: 84px;
+    border-radius: 19px;
+    display: block;
+    border: 1px solid var(--border);
+  }
+
+  /* Précaution : `1fr` vaut `minmax(auto, 1fr)`, dont le minimum est la largeur
+     min-content. Un mot très long — un nom d'app à rallonge — ferait déborder
+     la carte sur un écran étroit. */
+  .app > div { min-width: 0; }
+
+  .app h2 {
+    margin: 0 0 2px;
+    font-size: 1.2rem;
+    font-weight: 650;
+    letter-spacing: -0.01em;
+  }
+
+  .meta {
+    margin: 0 0 10px;
+    color: var(--muted);
+    font-size: .84rem;
+    text-transform: uppercase;
+    letter-spacing: .06em;
+  }
+
+  .app p.pitch {
+    margin: 0 0 16px;
+    color: var(--text);
+  }
+
+  .badge {
+    display: inline-block;
+    padding: 9px 18px;
+    background: var(--accent);
+    color: #fff;
+    text-decoration: none;
+    font-size: .92rem;
+    font-weight: 600;
+    border-radius: 999px;
+  }
+  .badge:hover { opacity: .88; }
+
+  .note {
+    margin: 40px 0 0;
+    padding: 20px 22px;
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    color: var(--muted);
+    font-size: .94rem;
+    background: var(--surface);
+  }
+  .note strong { color: var(--text); }
+
+  footer {
+    margin-top: 44px;
+    padding-top: 26px;
+    border-top: 1px solid var(--border);
+    text-align: center;
+    color: var(--muted);
+    font-size: .92rem;
+  }
+  footer a { color: var(--accent); text-decoration: none; }
+  footer a:hover { text-decoration: underline; }
+  footer nav { margin-bottom: 12px; }
+  footer nav a { margin: 0 10px; display: inline-block; }
+
+  @media (max-width: 520px) {
+    .app { grid-template-columns: 1fr; gap: 14px; }
+    .app img { width: 68px; height: 68px; border-radius: 15px; }
+    header { padding: 52px 0 34px; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header>
+    <h1>Applications iOS</h1>
+    <p class="tagline">
+      Des apps qui font une chose et la font bien. Sans compte, sans inscription,
+      et sans que vos données quittent votre appareil.
+    </p>
+  </header>
+
+  <main class="apps">
+
+    <article class="app">
+      <img src="icons/maillecompagnon.png" alt="Icône de MailleCompagnon" width="84" height="84">
+      <div>
+        <h2>MailleCompagnon</h2>
+        <p class="meta">Productivité · Gratuit</p>
+        <p class="pitch">
+          Un compteur de rangs pour l'amigurumi. Chaque partie compte pour
+          elle-même — la tête, le corps, chaque bras — sans jamais confondre les
+          deux. Utilisable d'une main, avec application Apple&nbsp;Watch, widget
+          d'écran d'accueil et journal photo de l'ouvrage.
+        </p>
+        <a class="badge" href="https://apps.apple.com/app/id6796005471">Voir sur l'App&nbsp;Store</a>
+      </div>
+    </article>
+
+    <article class="app">
+      <img src="icons/bruitblanc.png" alt="Icône de BruitBlanc+" width="84" height="84">
+      <div>
+        <h2>BruitBlanc+</h2>
+        <p class="meta">Utilitaires · Achat unique</p>
+        <p class="pitch">
+          Quatre sons réalistes à mélanger librement : bruit blanc, pluie et
+          orage, ventilateur, vagues. Minuterie d'endormissement avec fondu
+          progressif, pour ne jamais être réveillé par un silence brutal.
+          Fonctionne hors ligne, même en mode avion.
+        </p>
+        <a class="badge" href="https://apps.apple.com/app/id6782067196">Voir sur l'App&nbsp;Store</a>
+      </div>
+    </article>
+
+    <article class="app">
+      <img src="icons/budgetzen.png" alt="Icône de BudgetZen" width="84" height="84">
+      <div>
+        <h2>BudgetZen</h2>
+        <p class="meta">Finance · Achat unique</p>
+        <p class="pitch">
+          Reprendre la main sur ses finances, sans y passer ses soirées. Suivi
+          des revenus et des dépenses, répartition 50/30/20 entre essentiels,
+          envies et épargne, vue mensuelle graphique et objectifs à suivre.
+        </p>
+        <a class="badge" href="https://apps.apple.com/app/id6749244536">Voir sur l'App&nbsp;Store</a>
+      </div>
+    </article>
+
+  </main>
+
+  <p class="note">
+    <strong>Ce qu'elles ont en commun.</strong>
+    Aucune ne demande de compte ni d'inscription. Vos données sont enregistrées
+    sur votre appareil et n'y sont consultées par personne d'autre que vous.
+    BruitBlanc+ et BudgetZen n'affichent aucune publicité ; MailleCompagnon est
+    gratuite avec des annonces, qu'un achat unique retire définitivement.
+  </p>
+
+  <footer>
+    <nav>
+      <a href="https://m2mo.github.io/budgetzen-support/">Assistance</a>
+      <a href="https://m2mo.github.io/budgetzen-privacy/">Confidentialité</a>
+      <a href="mailto:applications@e-nova.io">Nous écrire</a>
+    </nav>
+    <p>© 2026 Mohamed Fourali</p>
+  </footer>
+
+</div>
+</body>
+</html>
